@@ -58,7 +58,12 @@
 
       <div class="row">
         <div class="push-9 small-3">
-          <button type="submit" class="button">Update</button>
+          <button type="submit"
+                  class="button"
+                  ng-click="updateSettings()"
+                  ng-disabled="form.$dirty && form.$invalid">
+            Update
+          </button>
         </div>
       </div>
     </fieldset>
