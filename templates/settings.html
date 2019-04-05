@@ -15,8 +15,8 @@
                  ng-maxlength="20"
                  ng-pattern="/^[a-zA-Z]+$/"
                  required>
-          <div ng-show="true">
-            Hello World! {{ 1 + 2 }}
+          <div ng-show="form.name.$invalid">
+				    There is an error with the name attribute.
           </div>
         </div>
       </div>
