@@ -15,8 +15,16 @@
                  ng-maxlength="20"
                  ng-pattern="/^[a-zA-Z]+$/"
                  required>
-          <div ng-show="form.name.$invalid">
-				    There is an error with the name attribute.
+          <div ng-show="form.name.$dirty && form.name.$invalid">
+						<div ng-show="form.name.$error.required">
+							Your name is required.
+						</div>
+						<div ng-show="form.name.$error.minlength">
+							Your name must be greater than 3 characters
+						</div>
+						<div ng-show="form.name.$error.maxlength">
+							Your name cannot be greater than 20 characters
+						</div>
           </div>
         </div>
       </div>
