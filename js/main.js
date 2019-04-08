@@ -13,7 +13,19 @@ app.config(function($routeProvider) {
 });
 
 app.controller('HomeController', function($scope) {
-  
+});
+
+app.controller('MailListingController', function($scope) {
+  $scope.email = [{
+    'id': 1,
+    'from': 'from_me@example.com',
+    'to': 'to_me@example.com',
+    'subject': 'Test 1',
+    'body': 'Test body 1'
+  }];
+});
+
+app.controller('ContentController', function($scope) {
 });
 
 app.controller('SettingsController', function($scope) {
